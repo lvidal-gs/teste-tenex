@@ -1,0 +1,131 @@
+:root {
+    --red-color: #dc143c
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body, main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:"header" "content" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 80px;
+}
+
+header {
+    grid-area: header;
+    background-color: #222;
+}
+
+main {
+    grid-area: content;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color: #fff;
+}
+
+footer {
+    grid-area: "footer";
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    color: #222;
+    font-weight: bold;
+}
+
+footer a {
+    background-color: var(--red-color);
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #fff;
+    transition: .3s ease all;
+}
+
+footer a:hover{
+    background-color: #222;
+    color: var(--red-color)
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--red-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.back:hover {
+    transform: translateX(-5px);
+}
+
+.view-btn {
+    color: var(--red-color);
+    transition: .3s all;
+}
+
+.view-btn:hover {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: var(--red-color);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px;
+}
+
+td {
+    padding: 6px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form * {
+    margin: 5px 0;
+    padding: 8px 16px;
+}
+
+button[type="submit"] {
+    background-color: var(--red-color);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.error-msg {
+    background-color: #fff;
+    color: var(--red-color);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
